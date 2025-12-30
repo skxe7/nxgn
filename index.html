@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Мої проєкти</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Мої проєкти</h1>
+
+<div class="tabs">
+    <button onclick="openTab('p1')">Проєкт 1</button>
+    <button onclick="openTab('p2')">Проєкт 2</button>
+</div>
+
+<div id="p1" class="tab">
+    <h2>Проєкт 1</h2>
+    <p>Опис програми</p>
+    <a href="projects/app1.zip" download>
+        <button>Завантажити</button>
+    </a>
+</div>
+
+<div id="p2" class="tab">
+    <h2>Проєкт 2</h2>
+    <p>Інший проєкт</p>
+    <a href="projects/app2.exe" download>
+        <button>Завантажити</button>
+    </a>
+</div>
+
+<script>
+function openTab(id) {
+    document.querySelectorAll('.tab').forEach(t => t.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+}
+openTab('p1');
+</script>
+
+</body>
+</html>
